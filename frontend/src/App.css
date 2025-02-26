@@ -37,7 +37,7 @@
   }
 }
 
-.content {
+.content {/*每个分屏块的整体设置*/
   background: rgb(255, 255, 255)!important;
   border-radius: 15px; /* 圆角半径 */
   border: 1px solid #000000; /* 边缘描线 */
@@ -45,14 +45,14 @@
 
 }
 
-.react-grid-placeholder {
+.react-grid-placeholder {/*每个分屏块的预览阴影设置*/
   color: #a8a8e9;
-  background: rgb(157, 157, 193)!important; /* 更改背景颜色和透明度 */
+  background: rgb(157, 157, 193)!important; /* 更改背景颜色和透明度，这里必须用important覆盖原有的默认设置 */
   border: 2px #fdfdfd; /* 更改边框样式和颜色 */
   border-radius: 15px; /* 添加圆角 */
 }
 
-.drag-handle {
+.drag-handle {/*拖拽条的设置*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@
   padding: 5px;
 }
 
-.drag-handle .circle {
+.drag-handle .circle {/*拖拽条中的小圆设置*/
   width: 8px;
   height: 6px;
   background-color: white; /* 圆内留白 */
@@ -70,7 +70,7 @@
   margin: 0 3px;
 }
 
-.drag-handle .circle.middle {
+.drag-handle .circle.middle {/*拖拽条中的大圆设置*/
   width: 20px; /* 中间的圆形稍大 */
   height: 8px;
 }

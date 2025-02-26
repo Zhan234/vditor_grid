@@ -1,7 +1,8 @@
-import "./App.css"; // 确保导入了 CSS 文件
+import "./App.css"; // 导入 CSS 文件
 import React from "react";
 import RGL, { WidthProvider } from "react-grid-layout";
-import VditorComponent from "./VditorComponent";
+import VditorComponent from "./VditorComponent"; //vditor设计解耦
+import DragHandle from "./DragHandle"; //拖拽条设计解耦
 
 const ReactGridLayout = WidthProvider(RGL);
 
@@ -38,27 +39,15 @@ const App = ({ onLayoutChange = () => {} }) => {
       // preventCollision={true}
     >
       <div key="1" className="content">
-        <div className="drag-handle">
-          <div className="circle"></div>
-          <div className="circle middle"></div>
-          <div className="circle"></div>
-        </div>
+        <DragHandle />
         <div className="block-content">内容 1</div>
       </div>
       <div key="3" className="content">
-        <div className="drag-handle">
-          <div className="circle"></div>
-          <div className="circle middle"></div>
-          <div className="circle"></div>
-        </div>
+        <DragHandle />
         <VditorComponent /> {/* 使用 Vditor 组件 */}
       </div>
       <div key="5" className="content">
-        <div className="drag-handle">
-          <div className="circle"></div>
-          <div className="circle middle"></div>
-          <div className="circle"></div>
-        </div>
+        <DragHandle />
         <div className="block-content">内容 5</div>
       </div>
     </ReactGridLayout>
