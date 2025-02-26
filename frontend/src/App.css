@@ -41,7 +41,7 @@
   background: rgb(255, 255, 255)!important;
   border-radius: 15px; /* 圆角半径 */
   border: 1px solid #000000; /* 边缘描线 */
-  padding: 10px; /* 内边距 */
+  padding: 0px; /* 内边距 */
 
 }
 
@@ -50,4 +50,27 @@
   background: rgb(157, 157, 193)!important; /* 更改背景颜色和透明度 */
   border: 2px #fdfdfd; /* 更改边框样式和颜色 */
   border-radius: 15px; /* 添加圆角 */
+}
+
+.drag-handle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e5e5; /* 淡灰色背景 */
+  border-radius: 15px 15px 0 0; /* 圆角半径 */
+  padding: 5px;
+}
+
+.drag-handle .circle {
+  width: 8px;
+  height: 6px;
+  background-color: white; /* 圆内留白 */
+  border: 1px solid #ccc; /* 圆的边框颜色 */
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.drag-handle .circle.middle {
+  width: 20px; /* 中间的圆形稍大 */
+  height: 8px;
 }
